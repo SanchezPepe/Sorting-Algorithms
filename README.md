@@ -8,13 +8,13 @@
 6. *Shell Sort*
 
 ## Pruebas de eficiencia para cada algoritmo
-Pruebas hechas con el archivo movie_titles.txt
-Ordenamientos por ID de película
+*Pruebas hechas con el archivo movie_titles.txt
+*Ordenamientos por ID de película
 
-- 100 elementos
-- 1,000 elementos
-- 10,000 elementos
-- Todos los elementos (17,000 aprox.)
+  - 100 elementos
+  - 1,000 elementos
+  - 10,000 elementos
+  - Todos los elementos (17,000 aprox.)
 
 ## Material de apoyo
 * [Sorting Algorithm] (https://en.wikipedia.org/wiki/Sorting_algorithm)
