@@ -1,11 +1,11 @@
 # Sorting-Algorithms
 ## Algoritmos de Ordenamiento
-1.- *Selection Sort*
-2.- *Insertion Sort*
-3.- *Bubble Sort* 
-4.- *Quick Sort*
-5.- *Merge Sort*
-6.- *Shell Sort*
+1. *Selection Sort*
+2. *Insertion Sort*
+3. *Bubble Sort* 
+4. *Quick Sort*
+5. *Merge Sort*
+6. *Shell Sort*
 
 ## Comparación de eficiencia
 Pruebas hechas con el movie_titles.txt
