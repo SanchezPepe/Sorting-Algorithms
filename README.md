@@ -1,8 +1,8 @@
 # Sorting-Algorithms
 ## Algoritmos de Ordenamiento
-1. *[Selection Sort](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)*
+1. *[Selection Sort](http://www.codingconnect.net/wp-content/uploads/2016/09/Selection-Sort.gif)*
 2. *Insertion Sort*
-3. *Bubble Sort* 
+3. *[Bubble Sort](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)*
 4. *Quick Sort*
 5. *Merge Sort*
 6. *Shell Sort*
