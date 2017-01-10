@@ -11,9 +11,7 @@ package sortingalgorithms;
  */
 public class SortingAlgorithms<T extends Comparable<T>> {
 
-    /**
-     * Sort
-     */
+    
     public void SelectionSort(T elems[]) {
         int min;
         for (int i = 0; i < elems.length; i++) {
@@ -25,6 +23,21 @@ public class SortingAlgorithms<T extends Comparable<T>> {
             swap(elems, i, min);
         }
     }
+    
+    public void InsertionSort(T elems[]){
+        int i, j;
+        T aux;
+        for(i = 1; i < elems.length; i++){
+            aux = elems[i];
+            j = i-1;
+            while(j >= 0 && aux.compareTo(elems[j]) < 0){
+                elems[j+1] = elems[j];
+                j--;
+            }
+            elems[j+1] = aux;
+        }
+    }
+    
 
     //MÉTODOS AUXILIARES
     public void swap(T arre[], int i, int j) {
@@ -52,7 +65,8 @@ public class SortingAlgorithms<T extends Comparable<T>> {
 
         SortingAlgorithms<Integer> s = new SortingAlgorithms<Integer>();
         Integer arre[] = {93,62,30,88,84,56,11,82,91,75,13,94,36};
-        s.SelectionSort(arre);
+        //Integer arre[] = {93,642,330,1};
+        s.InsertionSort(arre);
         System.out.println(s.impArre(arre));
 
     }
