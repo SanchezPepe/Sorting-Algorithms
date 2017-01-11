@@ -38,6 +38,15 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         }
     }
     
+    public void BubbleSort(T elems[]){
+        for(int i = elems.length-1; i >= 0; i--){
+            for(int j = 0; j < i; j++){
+                if(elems[j].compareTo(elems[j+1]) > 0)
+                    swap(elems, j, j+1);
+            }
+        }
+    }
+    
 
     //MÉTODOS AUXILIARES
     public void swap(T arre[], int i, int j) {
@@ -66,7 +75,7 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         SortingAlgorithms<Integer> s = new SortingAlgorithms<Integer>();
         Integer arre[] = {93,62,30,88,84,56,11,82,91,75,13,94,36};
         //Integer arre[] = {93,642,330,1};
-        s.InsertionSort(arre);
+        s.BubbleSort(arre);
         System.out.println(s.impArre(arre));
 
     }
