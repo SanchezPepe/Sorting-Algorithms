@@ -16,8 +16,8 @@
   - Todos los elementos (17,000 aprox.)
 
 ## Material de apoyo
-* [Sorting Algorithm] (https://en.wikipedia.org/wiki/Sorting_algorithm)
-* [Sorting Algorithms Animations] (https://www.toptal.com/developers/sorting-algorithms)
+* [Wikipedia - Sorting Algorithm] (https://en.wikipedia.org/wiki/Sorting_algorithm)
+* [Toptal - Sorting Algorithms Animations] (https://www.toptal.com/developers/sorting-algorithms)
 * [VisuAlgo - Sorting] (https://visualgo.net/sorting)
 
 
