@@ -5,6 +5,8 @@
  */
 package sortingalgorithms;
 
+import java.util.Random;
+
 /**
  *
  * @author Pepe
@@ -47,6 +49,30 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         }
     }
     
+    public void quickSort(T arre[]){
+        quickSort(arre, 0, arre.length-1);
+    }
+    
+    private void quickSort(T arre[], int min, int max){
+        int pivote;
+        if(min >= max)
+            return;
+        pivote = particion(arre, min, max);
+        quickSort(arre, min, pivote - 1); //Subarreglo izquierdo
+        quickSort(arre, pivote + 1, max); //Subarreglo derecho
+    }
+    
+    public int particion(T arre[], int min, int max){
+        T aux = arre[max];
+        int i = min - 1;
+        for(int j = min; j <= max; j++)
+            if(arre[j].compareTo(aux) < 0){
+                i++;
+                swap(arre, i, j);
+            }
+        swap(arre, i + 1, max);
+        return i + 1;
+    }
 
     //MÉTODOS AUXILIARES
     public void swap(T arre[], int i, int j) {
@@ -55,7 +81,7 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         arre[j] = aux;
     }
 
-    public String impArre(T arre[]) {
+    public void impArre(T arre[]) {
         StringBuilder cad = new StringBuilder();
         cad.append("Arreglo:\n");
         int i = 0;
@@ -63,7 +89,7 @@ public class SortingAlgorithms<T extends Comparable<T>> {
             cad.append(arre[i]).append(" ");
             i++;
         }
-        return cad.toString();
+        System.out.println(cad.toString());
     }
 
     /**
@@ -73,10 +99,11 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         // TODO code application logic here
 
         SortingAlgorithms<Integer> s = new SortingAlgorithms<Integer>();
-        Integer arre[] = {93,62,30,88,84,56,11,82,91,75,13,94,36};
-        //Integer arre[] = {93,642,330,1};
-        s.BubbleSort(arre);
-        System.out.println(s.impArre(arre));
+        //Integer arre[] = {93,62,30,88,84,56,11,82,91,75,13,94,36};
+        Integer arre[] = {93,642,330,1};
+        s.impArre(arre);
+        s.quickSort(arre);
+        s.impArre(arre);
 
     }
 
