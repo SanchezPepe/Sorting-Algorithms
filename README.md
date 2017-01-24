@@ -20,7 +20,7 @@
 * [Toptal - Sorting Algorithms Animations] (https://www.toptal.com/developers/sorting-algorithms)
 * [VisuAlgo - Sorting] (https://visualgo.net/sorting)
 
-## Cómo tener cuenta Premium en Github gratis
+## TUTORIAL: Cómo tener Premium en Github totalmente gratis
 * [Click aquí] (https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 
