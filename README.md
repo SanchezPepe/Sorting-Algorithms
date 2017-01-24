@@ -20,6 +20,9 @@
 * [Toptal - Sorting Algorithms Animations] (https://www.toptal.com/developers/sorting-algorithms)
 * [VisuAlgo - Sorting] (https://visualgo.net/sorting)
 
+## Cómo tener cuenta Premium en Github gratis
+* [Click aquí] (https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
 
 
 https://help.github.com/articles/basic-writing-and-formatting-syntax/
