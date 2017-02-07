@@ -73,6 +73,18 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         swap(arre, i + 1, max);
         return i + 1;
     }
+    
+    public void heapSort(T tree[]){
+        T sorted[] = (T[]) new Comparable[tree.length];
+        int num = tree.length;
+        for(int i = 1; i <= num; i++){
+            sorted[i] = tree[1];      //SE ELIMINA LA RAÍZ Y SE PASA AL SORTED
+            swap(tree, 1, num);
+            tree[num] = null;
+            num--;
+            MaxHeapify(1, tree);
+        }
+    }
 
     //MÉTODOS AUXILIARES
     public void swap(T arre[], int i, int j) {
@@ -80,7 +92,40 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         arre[i] = arre[j];
         arre[j] = aux;
     }
-
+    
+    public void BuildMaxHeap(T arre[]){
+        T tree[] = (T[]) new Comparable[arre.length];
+        for(int i = 0; i < arre.length; i++){
+            arre[i] = tree[i]; 
+            while(i/2 >= 1){
+                if(arre[i].compareTo(tree[i/2]) > 0)
+                    swap(tree, i, i/2);
+                else
+                    break;
+                i = i/2;
+            }
+        }
+    }
+    
+    public void MaxHeapify(int index, T tree[]){
+        int heapSize = tree.length;
+        int izq = index*2;
+        int der = (index*2)+1;
+        int grande;
+        if(izq <= heapSize && der <= heapSize && tree[izq].compareTo(tree[der]) > 0)
+            grande = izq;
+        else
+            grande = index;
+        if(der <= heapSize && tree[der].compareTo(tree[grande]) > 0)
+            grande = der;
+        if(grande != index && tree[grande].compareTo(tree[index]) > 0){
+            swap(tree, index, grande);
+            MaxHeapify(grande, tree);
+        }else
+            if(izq <= heapSize && tree[izq].compareTo(tree[index]) > 0)
+                swap(tree, izq, index);
+    }
+    
     public void impArre(T arre[]) {
         StringBuilder cad = new StringBuilder();
         cad.append("Arreglo:\n");
@@ -102,7 +147,7 @@ public class SortingAlgorithms<T extends Comparable<T>> {
         //Integer arre[] = {93,62,30,88,84,56,11,82,91,75,13,94,36};
         Integer arre[] = {93,642,330,1};
         s.impArre(arre);
-        s.quickSort(arre);
+        s.heapSort(arre);
         s.impArre(arre);
 
     }
